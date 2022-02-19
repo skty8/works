@@ -655,6 +655,7 @@ header form input {
     order: 2 !important;
 }
 
+/* 柔軟な日付設定 */
 .calendar_date_flexible {
     top: 163px;
     left: 166px;
@@ -926,6 +927,7 @@ header form input {
     text-decoration: underline;
 }
 
+/* 体験 */
 .experience_date {
     display: flex;
     justify-content: space-between;
@@ -939,6 +941,7 @@ header form input {
     padding: 14px 24px;
 }
 
+/* 柔軟な検索（メイン） */
 .flexible_search {
     position: relative;
     margin: 28px 0 95px 0;

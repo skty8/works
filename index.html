@@ -64,6 +64,8 @@
                     </li>
                 </ul>
             </div>
+            
+            <!-- ログインメニュー -->
             <nav class="login_menu">
                 <ul>
                     <li>
@@ -81,6 +83,8 @@
                     </li>
                 </ul>
             </nav>
+
+            <!-- 検索フォーム -->
             <form class="form_hotel">
                 <ul class="hotel">
                     <li>
@@ -122,10 +126,13 @@
                         </ul>
                     </li>
                 </ul>
+                <!-- フォーカス時・柔軟な検索 -->
                 <article class="flexible_search_sub showing">
                     <p>柔軟な行き先と日付で検索</p>
                     <p><a href="#dummy">柔軟な検索を試してみる</a><span></span></p>
                 </article>
+
+                <!-- フォーカス時・カレンダー -->
                 <article class="calendar_date_flexible showing">
                     <div>
                         <div class="select_calendar">
@@ -290,6 +297,8 @@
                     </div>
                 </div>
             </form>
+
+            <!-- 体験（検索） -->
             <form class="form_experience">
                 <ul class="experience">
                     <li>
@@ -317,6 +326,8 @@
                         </ul>
                     </li>
                 </ul>
+
+                <!-- フォーカス時 -->
                 <article class="experience_location_search showing">
                     <div>
                         <p><img src="images/map_icon.png" alt="地図アイコン" width="48px" height="48px"></p>
@@ -324,6 +335,8 @@
                     </div>
                 </article>
             </form>
+
+            <!-- 柔軟な検索（メイン部分） -->
             <section class="flexible_search">
                 <p><img src="images/top_image.png" alt="テント" width="1190" height="600"></p>
                 <h1>
@@ -335,6 +348,7 @@
         </div>
     </header>
 
+    <!-- 旅 -->
     <main>
         <section class="journey_section">
             <div class="inner_wrap">
@@ -379,6 +393,8 @@
                 </div>
             </div>
         </section>
+
+        <!-- 体験 -->
         <section class="experience_section">
             <div class="inner_wrap">
                 <h2>Airbnb体験を検索しよう</h2>
@@ -408,6 +424,7 @@
         </section>
     </main>
 
+    <!-- フッター -->
     <footer>
         <div class="inner_wrap">
             <nav>
@@ -492,8 +509,6 @@
     <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ja.js"></script>
 
     <script>
-        // Flatpickr.l10n.months.longhand = ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'];
-        // Flatpickr.l10n.weekdays.shorthand = ['日', '月', '火', '水', '木', '金', '土'];
         flatpickr.localize(flatpickr.l10ns.ja);
         flatpickr('.calendar', {
             showMonths: 2
