@@ -1,0 +1,1263 @@
+@charset "utf-8";
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 18px;
+    color: #121212;
+}
+
+.inner_wrap {
+    width: 1190px;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 100px;
+}
+
+.grobal_icon {
+    width: 15px;
+}
+
+.user_icon {
+    width: 28px;
+}
+
+/* z-indexまとめ */
+.scroll {
+    z-index: 1;
+}
+
+.scroll_clicked {
+    z-index: 2;
+}
+
+.showing {
+    z-index: 2;
+}
+
+.login_menu,
+.experience_location_search,
+.select_guest,
+.arrow span,
+.modaal-wrapper .modaal-close,
+.flatpickr-calendar {
+    z-index: 3;
+}
+
+/* スクロール時 */
+.scroll {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    box-shadow: 0px 1px 10px 1px rgb(215 215 215 / 50%);
+    width: 100%;
+}
+
+.scroll .header_top {
+    padding: 14px 0;
+}
+
+.scroll .header_top nav {
+    flex-basis: 294px;
+}
+
+.scroll_search button {
+    position: relative;
+    color: #3f3f3f;
+    border: 1px solid #dddddd;
+    border-radius: 29px;
+    box-shadow: 0px 1px 2px 0px #dddddd;
+    width: 100%;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 15px 22px;
+}
+
+.scroll_search span {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 8px;
+    right: 6px;
+    background-color: #ff385c;
+    border-radius: 16px;
+    padding: 10px 10px;
+}
+
+.scroll .user_menu>li:first-child>a {
+    color: #3f3f3f;
+    font-weight: 600;
+}
+
+.scroll .user_menu>li:first-child>a:hover,
+.scroll .user_menu>li:nth-child(2)>a:hover {
+    background-color: #f3f3f3;
+}
+
+.scroll .user_menu li:last-child button {
+    border: 1px solid #e5e5e5;
+}
+
+.scroll_search button:hover,
+.scroll .user_menu li:last-child button:hover {
+    box-shadow: 0px 2px 4px 0px #dddddd;
+}
+
+/* スクロール・検索欄クリック時 */
+
+.scroll_clicked {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    box-shadow: 0px 1px 10px 1px rgb(215 215 215 / 50%);
+    width: 100%;
+    height: 186px;
+}
+
+.scroll_clicked .header_top nav {
+    color: #3e3e3e;
+}
+
+.scroll_clicked .user_menu li {
+    color: #000000;
+}
+
+.scroll_clicked .user_menu>li:first-child>a:hover,
+.scroll_clicked .user_menu>li:nth-child(2)>a:hover {
+    background-color: #f5f5f5;
+}
+
+.scroll_clicked .user_menu li:last-child button {
+    border: 1px solid #dddddd;
+}
+
+.scroll_clicked .user_menu li:last-child button:hover {
+    box-shadow: 0px 2px 4px 0px rgb(163 163 163 / 50%);
+}
+
+.scroll_clicked .inner_wrap form:first-of-type {
+    padding: 18px 0 0;
+}
+
+.scroll_clicked .hotel,
+.scroll_clicked .experience {
+    border: 1px solid #dddddd;
+    background-color: #f7f7f7;
+}
+
+.scroll_clicked .hotel_button::before,
+.scroll_clicked .experience_button::before {
+    background-color: #000000;
+}
+
+/* ヘッダー（共通） */
+header {
+    background: #000000;
+}
+
+.header_top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #ffffff;
+    padding-top: 25px;
+}
+
+.header_top>p {
+    flex-basis: 420px;
+}
+
+.header_top ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_top nav {
+    flex-basis: 260px;
+}
+
+.header_top>nav>ul {
+    font-size: 17px;
+}
+
+.user_menu {
+    flex-basis: 420px;
+    padding-left: 185px;
+}
+
+.user_menu li:first-child {
+    font-size: 15px;
+}
+
+.user_menu li:last-child button {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 6px 5px 6px 42px;
+}
+
+.user_menu>li:first-child>a {
+    padding: 10px 11px;
+}
+
+.user_menu>li:nth-child(2)>a {
+    padding: 5px 13px 8px;
+}
+
+.user_menu>li:first-child>a:hover,
+.user_menu>li:nth-child(2)>a:hover {
+    background-color: #272727;
+    border-radius: 20px;
+}
+
+header>.inner_wrap>form {
+    margin-top: 20px;
+}
+
+.hotel_button,
+.experience_button {
+    position: relative;
+    height: 25px;
+}
+
+.hotel_button::before, .experience_button::before {
+    display: inline-block;
+    position: absolute;
+    content: '';
+    bottom: -8px;
+    left: 50%;
+    background-color: #ffffff;
+    width: 19px;
+    height: 2px;
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translate(-50%);
+}
+
+.hidden::before {
+    content: none;
+}
+
+
+header .inner_wrap {
+    position: relative;
+}
+
+.login_menu_button {
+    position: relative;
+}
+
+.burger_top, .burger_middle, .burger_bottom {
+    position: absolute;
+    left: 14px;
+    width: 14px;
+    height: 2px;
+    background-color: #595959;
+}
+
+.burger_top {
+    top: 16px;
+}
+
+.burger_middle {
+    top: 20px;
+}
+
+.burger_bottom {
+    top: 24px;
+}
+
+.login_menu {
+    display: none;
+    font-size: 14px;
+    background-color: #ffffff;
+    border-radius: 9px;
+    box-shadow: -3px 0px 10px -6px rgb(41 41 41 / 46%);
+    width: 237px;
+    position: absolute;
+    top: 73px;
+    right: 0px;
+}
+
+.login_menu>ul>li {
+    padding: 7px 0px;
+}
+
+.login_menu>ul>li:first-child {
+    border-bottom: 1px solid #dddddd;
+}
+
+.login_menu_top>li>a,
+.login_menu_bottom>li>a {
+    display: block;
+    padding: 13px 14px;
+}
+
+.login_menu_top>li:hover,
+.login_menu_bottom>li:hover {
+    background-color: #f5f5f5;
+}
+
+.login_menu_top>li:first-child {
+    font-weight: bold;
+}
+
+.login_menu_top>li:nth-child(2),
+.login_menu_bottom>li {
+    color: #717171
+}
+
+.hotel, .experience {
+    background-color: #ffffff;
+    border-radius: 34px;
+    width: 856px;
+    margin: 0 auto;
+}
+
+.hotel {
+    display: flex;
+}
+
+.experience {
+    display: none;
+}
+
+header form li p {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+header form input[type="search"],
+header form li input[type="text"],
+#guest {
+    color: #838383;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+header form p,
+header form input {
+    width: 100%;
+}
+
+.hotel>li,
+.experience>li {
+    position: relative;
+}
+
+.hotel>li:nth-child(2)::before,
+.hotel>li:nth-child(3)::before,
+.hotel>li:nth-child(4)::before,
+.experience>li:nth-child(2)::before {
+    content: "";
+    display: inline-block;
+    height: 30px;
+    width: 1px;
+    height: 32px;
+    background-color: #dddddd;
+    position: absolute;
+    top: 17px;
+    left: 0px;
+}
+
+.hotel>li:nth-child(2):hover:before,
+.hotel>li:nth-child(3):hover:before,
+.hotel>li:nth-child(4):hover:before,
+.experience>li:nth-child(2):hover:before {
+    height: 0px;
+    width: 0px;
+}
+
+/* 要検討 */
+.hotel>li:first-child:hover+.hotel>li:nth-child(2)::before {
+    height: 0px;
+    width: 0px;
+}
+
+.hotel>li:first-child {
+    flex-basis: 270px;
+}
+
+.hotel_location, .experience_location {
+    padding: 15px 32px;
+}
+
+.hotel_location:hover,
+.hotel_checkin:hover,
+.hotel_checkout:hover,
+.hotel_guest:hover,
+.experience_location:hover,
+.experience_date:hover {
+    border-radius: 34px;
+    background-color: #ededed;
+}
+
+.focus_shadow_right,
+.focus_shadow_right:hover {
+    border-radius: 34px;
+    background-color: #ffffff;
+    box-shadow: 10px 0 5px -1px rgb(221 221 221 / 60%);
+}
+
+/* 要検討 */
+.focus_shadow_both,
+.focus_shadow_both:hover {
+    border-radius: 34px;
+    background-color: #ffffff;
+    box-shadow: 0px 0 3px 0px #dddddd;
+}
+
+.focus_shadow_left,
+.focus_shadow_left:hover {
+    border-radius: 34px;
+    background-color: #ffffff;
+    box-shadow: -10px 0 5px -1px rgb(221 221 221 / 60%);
+}
+
+.hotel>li:nth-child(2),
+.hotel>li:nth-child(3) {
+    flex-basis: 180px;
+}
+
+.hotel_checkin, .hotel_checkout {
+    padding: 14px 24px;
+}
+
+.hotel>li:last-child {
+    flex-basis: 225px;
+}
+
+.hotel_guest>li:first-child {
+    flex-basis: 165px;
+    padding: 14px 15px 14px 24px;
+}
+
+.hotel_guest>li:last-child,
+.experience_date>li:last-child {
+    display: flex;
+    align-items: center;
+    flex-basis: 60px;
+}
+
+.search_button, .long_search_button,
+.experience_date button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff385c;
+    border-radius: 30px;
+    width: 50px;
+    padding: 17px 25px;
+}
+
+.long_search_button {
+    display: none;
+    position: relative;
+    left: 17px;
+    background: linear-gradient(#d32c5a, #ff385c);
+    width: 86px;
+    padding: 16px 0px;
+    margin-right: 24px;
+}
+
+.long_search_button img {
+    position: absolute;
+    left: 17px;
+}
+
+.long_search_button p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    padding-left: 40px;
+}
+
+.hotel_guest li:last-of-type button:hover,
+.experience_date button:hover {
+    background-color: #e03252;
+}
+
+/* 要検討 */
+/* .hotel_guest button:hover+ */
+
+.hotel_guest {
+    display: flex;
+}
+
+/* クリック時表示項目（共通） */
+.showing {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    border-radius: 34px;
+}
+
+.flexible_search_sub {
+    width: 503px;
+    padding: 32px;
+    margin: 12px 0 0 166px;
+}
+
+.flexible_search_sub p:first-child {
+    font-size: 13px;
+}
+
+.flexible_search_sub a {
+    display: inline-block;
+    font-weight: bold;
+    border: 1px solid #dddddd;
+    border-radius: 28px;
+    box-shadow: 0px 4px 11px 1px #dddddd;
+    width: 436px;
+    padding: 16px 22px 17px;
+    margin-top: 17px;
+
+}
+
+.flexible_search_sub p:last-of-type{
+    position: relative;
+}
+
+.flexible_search_sub span{
+    position: absolute;
+    bottom: 13px;
+    right:25px;
+    /* background-color: #74019B; */
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.flexible_search_sub span::before{
+    content: '';
+    position: absolute;
+    top: 34%;
+    left: 33%;
+    transform: rotate(-135deg);
+    border-left: 2px solid #74019B;
+    border-bottom: 2px solid #74019B;
+    width: 15px;
+    height: 15px;
+    top: 25%;
+    left: 33%;
+    transform: rotate(-135deg);
+}
+
+
+.flexible_search_sub a:hover {
+    box-shadow: 0px 6px 12px 3px #d6d6d6;
+}
+
+/* カレンダー */
+.select_calendar {
+    display: flex;
+    justify-content: space-around;
+    font-size: 14px;
+    background-color: #dddddd;
+    border-radius: 20px;
+    width: 226px;
+    padding: 3px;
+    margin: 20px auto;
+}
+
+.date_calendar, .date_flexible {
+    background-color: #ffffff;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.date_calendar {
+    padding: 2px 10px;
+}
+
+.date_flexible {
+    padding: 2px 12px;
+}
+
+.flatpickr-calendar .date_flexible,
+.calendar_date_flexible .date_calendar {
+    background-color: #dddddd;
+}
+
+.flatpickr-calendar .date_flexible:hover,
+.calendar_date_flexible .date_calendar:hover {
+    background-color: #f5f5f5;
+}
+
+
+.flatpickr-calendar {
+    border-radius: 31px;
+    width: 856px !important;
+    height: 500px;
+    top: 165px !important;
+    left: 246px !important;
+}
+
+.flatpickr-calendar:before,
+.flatpickr-calendar:after {
+    content: none;
+}
+
+.flatpickr-innerContainer {
+    justify-content: space-around;
+    width: 100% !important;
+    margin-top: 14px;
+}
+
+.flatpickr-rContainer {
+    display: block !important;
+    width: 745px;
+}
+
+.flatpickr-weekdays {
+    justify-content: space-between;
+}
+
+.flatpickr-months {
+    margin-top: 20px;
+}
+
+.flatpickr-prev-month,
+.flatpickr-next-month {
+    top: 23px !important;
+}
+
+.flatpickr-days {
+    justify-content: space-between;
+    width: 100% !important;
+}
+
+.flatpickr-day {
+    flex-basis: 49px !important;
+    max-width: 49px !important;
+    height: 49px !important;
+    line-height: 48px !important;
+}
+
+.flatpickr-weekdaycontainer,
+.dayContainer {
+    flex-basis: 345px !important;
+    max-width: 345px !important;
+}
+
+.cur-year {
+    order: 1 !important;
+}
+
+.cur-month {
+    order: 2 !important;
+}
+
+.calendar_date_flexible {
+    top: 163px;
+    left: 166px;
+    width: 856px;
+    height: 395px;
+    /* margin: 12px auto 0px; */
+}
+
+.calendar_date_flexible>div {
+    /* padding-top: 10px; */
+    padding: 10px 28px;
+}
+
+.calendar_date_flexible .select_calendar>button {
+    padding: 6px 10px;
+}
+
+.calendar_date_flexible>div>p {
+    color: #8d8d8d;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.select_period {
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.select_period button {
+    border: 1px solid #cdcdcd;
+    border-radius: 26px;
+    padding: 6px 11px;
+    margin: 0 4px;
+}
+
+.select_period button:hover,
+.select_month li button:hover {
+    border: 1px solid #000000;
+}
+
+.clicked {
+    border: 2px solid #000000 !important;
+}
+
+.select_month {
+    display: flex;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    margin: 25px 0;
+}
+
+.select_month li:first-child {
+    position: relative;
+}
+
+.arrow {
+    position: relative;
+}
+
+.arrow span {
+    position: absolute;
+    bottom: 113px;
+    background-color: #ffffff;
+    box-shadow: 0px 3px 2px 0px rgb(225 225 225 / 50%);
+    border: 1px solid #dadada;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.arrow span:before {
+    content: '';
+    position: absolute;
+    border-left: 2px solid #808080;
+    border-bottom: 2px solid #808080;
+    width: 7px;
+    height: 7px;
+}
+
+.left {
+    top: 52px;
+    left: -10px;
+}
+
+.left:before {
+    top: 36%;
+    left: 40%;
+    transform: rotate(45deg);
+}
+
+.right {
+    top: -98px;
+    right: -13px;
+}
+
+.right:before {
+    top: 34%;
+    left: 33%;
+    transform: rotate(-135deg);
+}
+
+.select_month::-webkit-scrollbar {
+    display: none;
+}
+
+.select_month button {
+    text-align: center;
+    border: 1px solid #cdcdcd;
+    border-radius: 16px;
+    padding: 30px 44px 16px;
+    margin: 0 6px;
+}
+
+.select_month p {
+    font-weight: 300;
+}
+
+.select_month p:first-of-type {
+    margin: 7px 0;
+}
+
+.select_month p:nth-of-type(2) {
+    color: #8d8d8d;
+    font-size: 12px;
+}
+
+.select_guest {
+    background-color: #ffffff;
+    position: absolute;
+    top: 163px;
+    right: 175px;
+    width: 395px;
+    height: 364px;
+}
+
+.select_guest ul {
+    padding: 15px 30px 30px;
+}
+
+.select_guest li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border-bottom: 1px solid #dddddd;
+    padding: 15px 0px;
+}
+
+.select_guest li:last-of-type {
+    border-bottom: 0px;
+}
+
+.select_guest li p {
+    display: flex;
+    align-items: center;
+}
+
+.guest_count {
+    flex-basis: 113px;
+    justify-content: space-between;
+}
+
+.guest_count button {
+    font-size: 15px;
+    color: #898888;
+    border: 1px solid #898888;
+    border-radius: 20px;
+    padding: 5px 6px;
+}
+
+.select_guest dl {
+    flex-basis: 222px;
+}
+
+.select_guest dt {
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.select_guest dd,
+.select_guest ul>li:last-of-type>p:last-of-type {
+    color: #898888;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.select_guest ul>li:last-of-type>p:last-of-type {
+    padding-top: 24px;
+}
+
+.asist_animal_link {
+    color: #000000;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#asist_animal {
+    display: none
+}
+
+.modaal-wrapper .modaal-close {
+    position: absolute;
+    top: 11px;
+    left: 17px;
+}
+
+.modaal-close {
+    right: 60px;
+    width: 35px;
+    height: 35px;
+}
+
+.modaal-close:after,
+.modaal-close:before {
+    background: #626161;
+    top: 10px;
+    left: 17px;
+    width: 2px;
+    height: 16px;
+}
+
+.modaal-close:focus,
+.modaal-close:hover {
+    background: #ededed;
+}
+
+.modaal-close:focus:after,
+.modaal-close:focus:before,
+.modaal-close:hover:after,
+.modaal-close:hover:before {
+    background: #626161;
+}
+
+.modaal-container {
+    border-radius: 10px 0 0 10px;
+    width: 570px;
+    height: 583px;
+    overflow-y: auto;
+}
+
+.modaal-content-container {
+    padding: 54px 25px 25px;
+}
+
+.modaal-container dl {
+    padding: 25px 0 25px;
+}
+
+.modaal-container dt {
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.modaal-container dd {
+    color: #000000;
+    font-size: 17px;
+    padding-top: 10px;
+}
+
+.modaal-container a {
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.experience_date {
+    display: flex;
+    justify-content: space-between;
+}
+
+.experience>li {
+    flex-basis: 428px;
+}
+
+.experience_date>li:first-child {
+    padding: 14px 24px;
+}
+
+.flexible_search {
+    position: relative;
+    margin: 28px 0 95px 0;
+}
+
+.flexible_search h1 {
+    position: absolute;
+    bottom: 163px;
+    left: 242px;
+    color: #ffffff;
+    font-size: 39px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.flexible_search>p:last-child a {
+    position: absolute;
+    bottom: 63px;
+    left: 514px;
+    background-color: #ffffff;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 30px;
+    padding: 17px 34px;
+}
+
+.flexible_search>p:last-child a:hover {
+    background-color: #f8f5f5;
+}
+
+.flexible_search_sub a,
+.flexible_search>p:last-child a span {
+    background: #ffffff -webkit-linear-gradient(left, #74019B, #A60189);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.experience>li:first-child,
+.experience>li:last-child {
+    flex-basis: 428px;
+}
+
+.experience_location_search {
+    top: 164px;
+    left: 167px;
+    width: 500px;
+}
+
+.experience_location_search>div {
+    display: flex;
+    align-items: center;
+    padding: 30px 30px 15px;
+}
+
+.experience_location_search>div>p:first-of-type {
+    flex-basis: 48px;
+}
+
+.experience_location_search>div>p:last-of-type {
+    padding-left: 12px;
+    font-size: 16px;
+}
+
+.experience_date .long_search_button {
+    display: none;
+    width: 86px;
+    padding: 16px 0px;
+}
+
+/* 旅行・体験・ホスト */
+.journey_section,
+.experience_section,
+.hosting_section {
+    margin-top: 96px;
+}
+
+.hover_gray:hover {
+    background-color: #eeeeee;
+}
+
+.journey_section h2, .experience_section h2 {
+    font-size: 33px;
+    font-weight: bold;
+    margin-bottom: 47px;
+}
+
+.journey_section article div {
+    color: #ffffff;
+}
+
+.journey_layout_wrap {
+    display: grid;
+    grid-template-rows: 187px 187px;
+    grid-template-columns: 23% 23% 23% 23%;
+    justify-content: space-between;
+}
+
+.item1 img {
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+
+.item1 div {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    background: #bc1a6e;
+}
+
+.item2 img {
+    grid-row: 1/2;
+    grid-column: 2/3;
+}
+
+.item2 div {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    background: #de3151;
+}
+
+.item3 img {
+    grid-row: 1/2;
+    grid-column: 3/4;
+}
+
+.item3 div {
+    grid-row: 2/3;
+    grid-column: 3/4;
+    background: #d93b30;
+}
+
+.item4 img {
+    grid-row: 1/2;
+    grid-column: 4/5;
+}
+
+.item4 div {
+    grid-row: 2/3;
+    grid-column: 4/5;
+    background: #cc2d4a;
+}
+
+.journey_layout_wrap img, .journey_layout_wrap div {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.journey_layout_wrap img {
+    border-radius: 11px 11px 0 0;
+}
+
+.journey_layout_wrap div {
+    border-radius: 0 0 11px 11px;
+    padding: 20px 15px 20px 15px;
+}
+
+.journey_layout_wrap div h3 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.journey_layout_wrap div p {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.experience_layout_wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.experience_layout_wrap article {
+    flex-basis: 48%;
+    height: 665px;
+    position: relative;
+}
+
+.experience_layout_wrap article img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.experience_layout_wrap article h3 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #ffffff;
+    position: absolute;
+    top: 42px;
+    left: 35px;
+}
+
+.experience_layout_wrap article a {
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #ffffff;
+    border-radius: 12px;
+    position: absolute;
+    top: 165px;
+    left: 35px;
+    padding: 15px 23px;
+}
+
+.hosting_section {
+    background-image: url(../images/host.png);
+    height: 672px;
+}
+
+.hosting_section .inner_wrap {
+    padding-top: 85px;
+}
+
+.hosting_section h2 {
+    font-size: 76px;
+    font-weight: bold;
+    color: #ffffff;
+    letter-spacing: -6.9px;
+    line-height: 1.05;
+}
+
+.hosting_section p {
+    margin-top: 230px;
+}
+
+.hosting_section p a {
+    background-color: #ffffff;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 14px 20px;
+}
+
+/* フッター */
+footer {
+    background-color: #f7f7f7;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    padding-top: 55px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .inner_wrap nav {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #DDDDDD;
+    padding-bottom: 26px;
+}
+
+footer .inner_wrap dt, footer .inner_wrap dd {
+    padding-bottom: 22px;
+}
+
+footer .inner_wrap dl {
+    flex-basis: 280px;
+}
+
+footer .inner_wrap dt {
+    font-weight: 700;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.footer_layout_wrap {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 0;
+}
+
+.copyright {
+    flex-basis: 480px;
+}
+
+.copyright_list ul, .copyright_list li, .copyright {
+    display: inline;
+}
+
+.linkage {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 317px;
+}
+
+.grobal, .sns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.grobal {
+    flex-basis: 160px;
+}
+
+.sns {
+    flex-basis: 102px;
+}
+
+.grobal span {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.grobal_japanese {
+    padding-left: 10px;
+}
+
+
+
+.facebook_icon {
+    width: 9px;
+}
+
+.twitter_icon {
+    width: 19px;
+}
+
+.instagram_icon {
+    width: 18px;
+}

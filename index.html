@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&family=Noto+Sans+JP:wght@100;300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/modaal@0.4.4/dist/css/modaal.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <title>Airbnb：バケーションレンタルやログハウス、ビーチハウスなどのユニークな宿泊先と体験</title>
+</head>
+
+<body id="top">
+    <header>
+        <!-- スクロール時 -->
+        <div class="scroll">
+            <div class="inner_wrap">
+                <div class="header_top">
+                    <p><a href="#top"><img class="logo" src="images/logo_red.svg" alt="airbnbロゴ"></a></p>
+                    <nav class="scroll_search">
+                        <button>検索をはじめる<span><img src="images/search.svg" alt="検索ボタン" width="12"
+                                    height="12"></span></button>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <!-- スクロール＋検索欄クリック時 -->
+        <div class="scroll_clicked">
+            <div class="inner_wrap"></div>
+        </div>
+
+        <!-- 既定表示 -->
+        <div class="inner_wrap">
+            <div class="header_top">
+                <p><a href="#top"><img class="logo" src="images/logo_white.svg" alt="airbnbロゴ"></a></p>
+                <nav>
+                    <ul>
+                        <li><button class="hotel_button hidden">宿泊先</button></li>
+                        <li><button class="experience_button hidden">体験</button></li>
+                        <li><a href="#dummy">オンライン体験</a></li>
+                    </ul>
+                </nav>
+                <ul class="user_menu">
+                    <li><a href="#dummy">ホストになる</a></li>
+                    <li><a href="#dummy"><img class="grobal_icon" src="images/grobal_white.svg" alt="グローバルアイコン"></a>
+                    </li>
+                    <li>
+                        <input id="login_menu_flag" type="hidden" value="0">
+                        <button class="login_menu_button">
+                            <span class="burger_top"></span><span class="burger_middle"></span><span
+                                class="burger_bottom"></span>
+                            <img class="user_icon" src="images/user.svg" alt="ユーザーアイコン">
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <nav class="login_menu">
+                <ul>
+                    <li>
+                        <ul class="login_menu_top">
+                            <li><a href="#dummy">登録する</a></li>
+                            <li><a href="#dummy">ログイン</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="login_menu_bottom">
+                            <li><a href="#dummy">宿泊をホストする</a></li>
+                            <li><a href="#dummy">体験をホストする</a></li>
+                            <li><a href="#dummy">ヘルプ</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <form class="form_hotel">
+                <ul class="hotel">
+                    <li>
+                        <div class="hotel_location">
+                            <p>ロケーション</p>
+                            <input type="search" placeholder="行き先はどちらですか？">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="hotel_checkin">
+                            <p>チェックイン</p>
+                            <input class="calendar salsa-calendar-input" type="text" id="checkin" autocomplete="off"
+                                name="到着" placeholder="日付を入力">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="hotel_checkout">
+                            <p>チェックアウト</p>
+                            <input class="calendar salsa-calendar-input" type="text" id="checkout" autocomplete="off"
+                                name="出発" placeholder="日付を入力">
+                        </div>
+                    </li>
+                    <li>
+                        <ul class="hotel_guest">
+                            <li>
+                                <p>人数</p>
+                                <button id="guest" class="guest_input">ゲスト数を入力</button>
+                            </li>
+                            <li>
+                                <button class="search_button" type="submit" name="btn_search">
+                                    <img src="images/search.svg" alt="検索ボタン" width="15" height="15">
+                                </button>
+                                <button class="long_search_button" type="submit" name="btn_search">
+                                    <img src="images/search.svg" alt="検索ボタン" width="15" height="15">
+                                    <p>探す</p>
+                                </button>
+
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <article class="flexible_search_sub showing">
+                    <p>柔軟な行き先と日付で検索</p>
+                    <p><a href="#dummy">柔軟な検索を試してみる</a><span></span></p>
+                </article>
+                <article class="calendar_date_flexible showing">
+                    <div>
+                        <div class="select_calendar">
+                            <button class="date_calendar calendar">カレンダー</button>
+                            <button class="date_flexible">柔軟な日付設定</button>
+                        </div>
+                        <p>滞在期間を選択してください。</p>
+                        <ul class="select_period">
+                            <li><button>週末</button></li>
+                            <li><button>1週間</button></li>
+                            <li><button>1か月間</button></li>
+                        </ul>
+                        <p>ご希望の月を選択してください。</p>
+                        <p class="arrow"><span class="left"></span></p>
+                        <ul class="select_month">
+                            <li>
+                                <button>
+                                    <img src="images/calendar_icon.png" alt="カレンダーアイコン" width="32px" height="32px">
+                                    <p>2月</p>
+                                    <p>2022</p>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <img src="images/calendar_icon.png" alt="カレンダーアイコン" width="32px" height="32px">
+                                    <p>3月</p>
+                                    <p>2022</p>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <img src="images/calendar_icon.png" alt="カレンダーアイコン" width="32px" height="32px">
+                                    <p>4月</p>
+                                    <p>2022</p>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <img src="images/calendar_icon.png" alt="カレンダーアイコン" width="32px" height="32px">
+                                    <p>5月</p>
+                                    <p>2022</p>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <img src="images/calendar_icon.png" alt="カレンダーアイコン" width="32px" height="32px">
+                                    <p>6月</p>
+                                    <p>2022</p>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <img src="images/calendar_icon.png" alt="カレンダーアイコン" width="32px" height="32px">
+                                    <p>7月</p>
+                                    <p>2022</p>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <img src="images/calendar_icon.png" alt="カレンダーアイコン" width="32px" height="32px">
+                                    <p>8月</p>
+                                    <p>2022</p>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <img src="images/calendar_icon.png" alt="カレンダーアイコン" width="32px" height="32px">
+                                    <p>9月</p>
+                                    <p>2022</p>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <img src="images/calendar_icon.png" alt="カレンダーアイコン" width="32px" height="32px">
+                                    <p>10月</p>
+                                    <p>2022</p>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <img src="images/calendar_icon.png" alt="カレンダーアイコン" width="32px" height="32px">
+                                    <p>11月</p>
+                                    <p>2022</p>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <img src="images/calendar_icon.png" alt="カレンダーアイコン" width="32px" height="32px">
+                                    <p>12月</p>
+                                    <p>2022</p>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <img src="images/calendar_icon.png" alt="カレンダーアイコン" width="32px" height="32px">
+                                    <p>1月</p>
+                                    <p>2023</p>
+                                </button>
+                            </li>
+                        </ul>
+                        <p class="arrow"><span class="right"></span></p>
+                    </div>
+                </article>
+                <article class="select_guest showing">
+                    <ul>
+                        <li>
+                            <dl>
+                                <dt>大人</dt>
+                                <dd>13歳以上</dd>
+                            </dl>
+                            <p class="guest_count">
+                                <button>―</button>
+                                <span>0</span>
+                                <button>＋</button>
+                            </p>
+
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>子ども</dt>
+                                <dd>年齢2 - 12</dd>
+                            </dl>
+                            <p class="guest_count">
+                                <button>―</button>
+                                <span>0</span>
+                                <button>＋</button>
+                            </p>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>乳幼児</dt>
+                                <dd>2歳未満</dd>
+                            </dl>
+                            <p class="guest_count">
+                                <button>―</button>
+                                <span>0</span>
+                                <button>＋</button>
+                            </p>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>ペット</dt>
+                                <dd><a class="asist_animal_link" href="#asist_animal">介助動物を同伴しますか？</a></dd>
+                            </dl>
+                            <p class="guest_count">
+                                <button>―</button>
+                                <span>0</span>
+                                <button>＋</button>
+                            </p>
+                            <p>3匹以上のペットを同伴する場合は、必ずホストにその旨をご連絡ください。</p>
+                        </li>
+                    </ul>
+                </article>
+                <div id="asist_animal">
+                    <div>
+                        <p><img src="images/asist_animal.png" alt="介助動物" width="504px" height="429px"></p>
+                        <dl>
+                            <dt>介助動物</dt>
+                            <dd>介助動物はご同伴いただけます。ペットとして追加する必要はありません。</dd>
+                        </dl>
+                        <p><a href="#dummy">詳細を確認</a></p>
+                    </div>
+                </div>
+            </form>
+            <form class="form_experience">
+                <ul class="experience">
+                    <li>
+                        <div class="experience_location">
+                            <p>ロケーション</p>
+                            <input type="search" placeholder="行き先はどちらですか？">
+                        </div>
+                    </li>
+                    <li>
+                        <ul class="experience_date">
+                            <li>
+                                <p>日付</p>
+                                <input class="date salsa-calendar-input calendar" type="text" autocomplete="off"
+                                    name="体験日" placeholder="希望日を追加">
+                            </li>
+                            <li>
+                                <button class="search_button" type="submit" name="btn_search">
+                                    <img src="images/search.svg" alt="検索ボタン" width="15" height="15">
+                                </button>
+                                <button class="long_search_button" type="submit" name="btn_search">
+                                    <img src="images/search.svg" alt="検索ボタン" width="15" height="15">
+                                    <p>探す</p>
+                                </button>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <article class="experience_location_search showing">
+                    <div>
+                        <p><img src="images/map_icon.png" alt="地図アイコン" width="48px" height="48px"></p>
+                        <p>近場</p>
+                    </div>
+                </article>
+            </form>
+            <section class="flexible_search">
+                <p><img src="images/top_image.png" alt="テント" width="1190" height="600"></p>
+                <h1>
+                    <p>次はどこへ行こう？</p>
+                    <p>さらに柔軟な検索で、広がる旅の可能性。</p>
+                </h1>
+                <p><a href="#dummy"><span>柔軟な検索</span></a></p>
+            </section>
+        </div>
+    </header>
+
+    <main>
+        <section class="journey_section">
+            <div class="inner_wrap">
+                <h2>次に行く旅のアイディアを見つけよう</h2>
+                <div class="journey_layout_wrap">
+                    <article class="item1">
+                        <a href="#dummy">
+                            <img class="item1" src="images/osaka_illust.jpg" alt="星空">
+                            <div>
+                                <h3>大阪</h3>
+                                <p>目的地まで402km</p>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="item2">
+                        <a href="#dummy">
+                            <img src="images/odawara_illust.jpg" alt="海">
+                            <div>
+                                <h3>小田原</h3>
+                                <p>目的地まで72km</p>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="item3">
+                        <a href="#dummy">
+                            <img src="images/kyoto_illust.jpg" alt="公園">
+                            <div>
+                                <h3>京都</h3>
+                                <p>目的地まで369km</p>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="item4">
+                        <a href="#dummy">
+                            <img src="images/nagano_illust.jpg" alt="山道">
+                            <div>
+                                <h3>長野</h3>
+                                <p>目的地まで176km</p>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="experience_section">
+            <div class="inner_wrap">
+                <h2>Airbnb体験を検索しよう</h2>
+                <div class="experience_layout_wrap">
+                    <article>
+                        <img src="images/experience.png" alt="体験">
+                        <h3>旅行中に<br>
+                            楽しめる体験</h3>
+                        <p><a class="hover_gray" href="#dummy">体験</a></p>
+                    </article>
+                    <article>
+                        <img src="images/online_experience.png" alt="体験">
+                        <h3>お家から<br>
+                            楽しめる体験</h3>
+                        <p><a class="hover_gray" href="#dummy">オンライン体験</a></p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="hosting_section">
+            <div class="inner_wrap">
+                <h2>ホスティングについて<br>
+                    知りたいことは<br>
+                    ありますか？</h2>
+                <p><a class="hover_gray" href="#dummy">スーパーホストに質問しよう</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="inner_wrap">
+            <nav>
+                <dl>
+                    <dt>サポート</dt>
+                    <dd><a href="#dummy">ヘルプセンター</a></dd>
+                    <dd><a href="#dummy">安全に関する情報</a></dd>
+                    <dd><a href="#dummy">キャンセルオプション</a></dd>
+                    <dd><a href="#dummy">Airbnbの新型コロナウイルスに対する取り組み</a></dd>
+                    <dd><a href="#dummy">障害のある方へのサポート</a></dd>
+                    <dd><a href="#dummy">近隣トラブルを報告する</a></dd>
+                </dl>
+                <dl>
+                    <dt>コミュニティ</dt>
+                    <dd><a href="#dummy">Airbnb.org：災害発生時の滞在先</a></dd>
+                    <dd><a href="#dummy">アフガン難民支援</a></dd>
+                    <dd><a href="#dummy">ダイバーシティ＆ビロンギングの促進</a></dd>
+                    <dd><a href="#dummy">差別に対する取り組み</a></dd>
+                </dl>
+                <dl>
+                    <dt>ホスティング</dt>
+                    <dd><a href="#dummy">ホスティングをはじめる</a></dd>
+                    <dd><a href="#dummy">AirCover：ホストに対する保護措置</a></dd>
+                    <dd><a href="#dummy">ホスト向けリソースを確認</a></dd>
+                    <dd><a href="#dummy">コミュニティフォーラムへ</a></dd>
+                    <dd><a href="#dummy">責任をもってホスティングする方法</a></dd>
+                </dl>
+                <dl>
+                    <dt>企業情報</dt>
+                    <dd><a href="#dummy">ニュースルーム</a></dd>
+                    <dd><a href="#dummy">新機能のご紹介</a></dd>
+                    <dd><a href="#dummy">Airbnb創業者からの手紙</a></dd>
+                    <dd><a href="#dummy">採用情報</a></dd>
+                    <dd><a href="#dummy">株主・投資家のみなさまへ</a></dd>
+                    <dd><a href="#dummy">Airbnb Luxe</a></dd>
+                </dl>
+            </nav>
+            <div class="footer_layout_wrap">
+                <div class="copyright_list">
+                    <p><a href="#dammy">Airbnb Global Services Limited<br>観光庁長官(01)第S0001号(2018年6月15日-2023年6月14日)</a>
+                    </p>
+                    <p class="copyright">© 2022 Airbnb, Inc. </p>
+                    <ul>
+                        <li>・<a href="#dummy">プライバシー</a></li>
+                        <li>・<a href="#dummy">利用規約</a></li>
+                        <li>・<a href="#dummy">サイトマップ</a></li>
+                        <li>・<a href="#dummy">企業情報</a></li>
+                    </ul>
+                </div>
+                <div class="linkage">
+                    <div class="grobal">
+                        <p><a href="#dummy"><img class="grobal_icon" src="images/grobal_black.svg" alt="グローバルアイコン"><span
+                                    class="grobal_japanese">日本語(JP)</span></a></p>
+                        <p><a href="#dummy">¥ <span>JPY</span></a></p>
+                    </div>
+                    <div class="sns">
+                        <p><a href="#dummy"><img class="facebook_icon" src="images/facebook.svg" alt="facebookアイコン"></a>
+                        </p>
+                        <p><a href="#dummy"><img class="twitter_icon" src="images/twitter.svg" alt="twitterアイコン"></a>
+                        </p>
+                        <p><a href="#dummy"><img class="instagram_icon" src="images/instagram.svg"
+                                    alt="instagramアイコン"></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--jquery-->
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+
+    <!-- モーダル -->
+    <script src="https://cdn.jsdelivr.net/npm/modaal@0.4.4/dist/js/modaal.min.js"
+        integrity="sha256-e8kfivdhut3LQd71YXKqOdkWAG1JKiOs2hqYJTe0uTk=" crossorigin="anonymous"></script>
+
+    <!--jsファイル-->
+    <script src="javascript/index.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ja.js"></script>
+
+    <script>
+        // Flatpickr.l10n.months.longhand = ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'];
+        // Flatpickr.l10n.weekdays.shorthand = ['日', '月', '火', '水', '木', '金', '土'];
+        flatpickr.localize(flatpickr.l10ns.ja);
+        flatpickr('.calendar', {
+            showMonths: 2
+        });
+    </script>
+</body>
+
+</html>
