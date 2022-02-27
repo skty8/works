@@ -43,7 +43,7 @@
         <div class="inner_wrap">
             <div class="header_top">
                 <p><a href="#top"><img class="logo" src="images/logo_white.svg" alt="airbnbロゴ"></a></p>
-                <nav>
+                <nav class="scale">
                     <ul>
                         <li><button class="hotel_button hidden">宿泊先</button></li>
                         <li><button class="experience_button hidden">体験</button></li>
@@ -52,7 +52,8 @@
                 </nav>
                 <ul class="user_menu">
                     <li><a href="#dummy">ホストになる</a></li>
-                    <li><a href="#dummy"><img class="grobal_icon" src="images/grobal_white.svg" alt="グローバルアイコン"></a>
+                    <li><button class="select_language_area_link"><img class="grobal_icon" src="images/grobal_white.svg"
+                                alt="グローバルアイコン"></button>
                     </li>
                     <li>
                         <input id="login_menu_flag" type="hidden" value="0">
@@ -64,7 +65,837 @@
                     </li>
                 </ul>
             </div>
-            
+
+            <article class="select_language_area">
+                <div class="modal_wrap">
+                    <button class="modal_close"><span>×</span></button>
+                    <div class="modal_container">
+                        <div class="select_language_area_tab">
+                            <button class="country_button">言語と地域</button>
+                            <button class="currency_button">通貨</button>
+                        </div>
+                        <div class="translation">
+                            <div class="translation_container">
+                                <dl>
+                                    <dt>
+                                        <p>翻訳</p>
+                                        <p><img src="images/translation.png" alt="翻訳アイコン" width="19" height="19"></p>
+                                    </dt>
+                                    <dd>説明とレビューを自動的に日本語に翻訳します。</dd>
+                                </dl>
+                                <button><img src="images/translation_switch.png" alt="翻訳切り替え"></button>
+                            </div>
+                        </div>
+                        <h4>推奨言語と地域</h4>
+                        <ul class="recommend_language_area">
+                            <li>
+                                <a href="#dummy">
+                                    <p>English</p>
+                                    <p>United States</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>English</p>
+                                    <p>United Kingdom</p>
+                                </a>
+                            </li>
+                        </ul>
+                        <h4>使用言語と地域を選択してください</h4>
+                        <ul class="select_country">
+                            <li>
+                                <a href="#dummy">
+                                    <p>日本語</p>
+                                    <p>日本</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Azərbaycan dili</p>
+                                    <p>Azərbaycan</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Bahasa Indonesia</p>
+                                    <p>Indonesia</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Bosanski</p>
+                                    <p>Bosna i Hercegovina</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Català</p>
+                                    <p>Espanya</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Čeština</p>
+                                    <p>Česká republika</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Crnogorski</p>
+                                    <p>Crna Gora</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Dansk</p>
+                                    <p>Danmark</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Deutsch</p>
+                                    <p>Deutschland</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Deutsch</p>
+                                    <p>Österreich</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Deutsch</p>
+                                    <p>Schweiz</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Eesti</p>
+                                    <p>Eesti</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>English</p>
+                                    <p>Australia</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>English</p>
+                                    <p>Canada</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>English</p>
+                                    <p>Guyana</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>English</p>
+                                    <p>India</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>English</p>
+                                    <p>Ireland</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>English</p>
+                                    <p>New Zealand</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>English</p>
+                                    <p>Singapore</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>English</p>
+                                    <p>United Arab Emirates</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Español</p>
+                                    <p>Argentina</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Español</p>
+                                    <p>Belice</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Español</p>
+                                    <p>Bolivia</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Español</p>
+                                    <p>Chile</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Español</p>
+                                    <p>Colombia</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Español</p>
+                                    <p>Costa Rica</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Español</p>
+                                    <p>Ecuador</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Español</p>
+                                    <p>El Salvador</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Español</p>
+                                    <p>España</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Español</p>
+                                    <p>Estados Unidos</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Español</p>
+                                    <p>Guatemala</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Español</p>
+                                    <p>Honduras</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Español</p>
+                                    <p>Latinoamérica</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Español</p>
+                                    <p>México</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Español</p>
+                                    <p>Nicaragua</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Español</p>
+                                    <p>Panamá</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Español</p>
+                                    <p>Paraguay</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Español</p>
+                                    <p>Perú</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Español</p>
+                                    <p>Venezuela</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Français</p>
+                                    <p>Belgique</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Français</p>
+                                    <p>Canada</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Français</p>
+                                    <p>France</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Français</p>
+                                    <p>Suisse</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Gaeilge</p>
+                                    <p>Éire</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Hrvatski</p>
+                                    <p>Hrvatska</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>isiXhosa</p>
+                                    <p>eMzantsi Afrika</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>isiZulu</p>
+                                    <p>iNingizimu Afrika</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Íslenska</p>
+                                    <p>Ísland</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Italiano</p>
+                                    <p>Italia</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Italiano</p>
+                                    <p>Svizzera</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Kiswahili</p>
+                                    <p>Āfrika</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Latviešu</p>
+                                    <p>Latvija</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Lietuvių</p>
+                                    <p>Lietuva</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Magyar</p>
+                                    <p>Magyarország</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Malti</p>
+                                    <p>Malta</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Melayu</p>
+                                    <p>Malaysia</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Nederlands</p>
+                                    <p>België</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Nederlands</p>
+                                    <p>Nederland</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Norsk</p>
+                                    <p>Norge</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Polski</p>
+                                    <p>Polska</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Português</p>
+                                    <p>Brasil</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Português</p>
+                                    <p>Portugal</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Română</p>
+                                    <p>România</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Shqip</p>
+                                    <p>Shqipëri</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Slovenčina</p>
+                                    <p>Slovensko</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Slovenščina</p>
+                                    <p>Slovenija</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Srpski</p>
+                                    <p>Srbija</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Suomi</p>
+                                    <p>Suomi</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Svenska</p>
+                                    <p>Sverige</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Tagalog</p>
+                                    <p>Pilipinas</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Tiếng Việt</p>
+                                    <p>Việt Nam</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Türkçe</p>
+                                    <p>Türkiye</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Ελληνικά</p>
+                                    <p>Ελλάδα</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Български</p>
+                                    <p>България</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Македонски</p>
+                                    <p>Северна Македонија</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Русский</p>
+                                    <p>Россия</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Українська</p>
+                                    <p>Україна</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>ქართული</p>
+                                    <p>საქართველო</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>Հայերեն</p>
+                                    <p>Հայաստան</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>עברית</p>
+                                    <p>ישראל</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>العربية</p>
+                                    <p>العالم</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>हिन्दी</p>
+                                    <p>भारत</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>ไทย</p>
+                                    <p>ประเทศไทย</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>한국어</p>
+                                    <p>대한민국</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>简体中文</p>
+                                    <p>美国</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>繁體中文</p>
+                                    <p>美國</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>简体中文</p>
+                                    <p>中国</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>繁體中文</p>
+                                    <p>香港</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>繁體中文</p>
+                                    <p>台灣</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+            <article class="select_currency">
+                <div class="modal_wrap">
+                    <button class="modal_close"><span>×</span></button>
+                    <div class="modal_container">
+                        <div class="select_language_area_tab">
+                            <button class="country_button">言語と地域</button>
+                            <button class="currency_button">通貨</button>
+                        </div>
+                        <h4>通貨を選択してください</h4>
+                        <ul class="currency">
+                            <li>
+                                <a href="#dummy">
+                                    <p>日本円</p>
+                                    <p>JPY - ¥</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>イスラエル新シェケル</p>
+                                    <p>ILS - ₪</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>インドルピー</p>
+                                    <p>INR - ₹</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>ウルグアイペソ</p>
+                                    <p>UYU - $U</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>エミラティディルハム</p>
+                                    <p>AED - ﺩ.ﺇ</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>カナダドル</p>
+                                    <p>CAD - $</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>クロアチアクーナ</p>
+                                    <p>HRK - kn</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>コスタリカコロン</p>
+                                    <p>CRC - ₡</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>コロンビアペソ</p>
+                                    <p>COP - $</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>サウジアラビアリアル</p>
+                                    <p>SAR - SR</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>シンガポールドル</p>
+                                    <p>SGD - $</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>スイスフラン</p>
+                                    <p>CHF</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>スウェーデンクローナ</p>
+                                    <p>SEK - kr</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>タイバーツ</p>
+                                    <p>THB - ฿</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>チェココルナ</p>
+                                    <p>CZK - Kč</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>チリペソ</p>
+                                    <p>CLP - $</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>デンマーククローネ</p>
+                                    <p>DKK - kr</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>トルコリラ</p>
+                                    <p>TRY - ₺</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>ニュージーランドドル</p>
+                                    <p>NZD - $</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>ニュー台湾ドル</p>
+                                    <p>TWD - $</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>ノルウェークローネ</p>
+                                    <p>NOK - kr</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>ハンガリーフォリント</p>
+                                    <p>HUF - Ft</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>フィリピンペソ</p>
+                                    <p>PHP - ₱</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>ブラジルレアル</p>
+                                    <p>BRL - R$</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>ブルガリアレフ</p>
+                                    <p>BGN - лв.</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>ペルーヌエボソル</p>
+                                    <p>PEN - S/</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>ポーランドズロチ</p>
+                                    <p>PLN - zł</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>マレーシアリンギット</p>
+                                    <p>MYR - RM</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>メキシコペソ</p>
+                                    <p>MXN - $</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>モロッコディルハム</p>
+                                    <p>MAD</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>ユーロ</p>
+                                    <p>EUR - €</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>ルーマニアレウ</p>
+                                    <p>RON - lei</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>ロシアルーブル</p>
+                                    <p>RUB - ₽</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>中国人民元</p>
+                                    <p>CNY - ￥</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>南アフリカランド</p>
+                                    <p>ZAR - R</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>米ドル</p>
+                                    <p>USD - $</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>英ポンド</p>
+                                    <p>GBP - £</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>豪ドル</p>
+                                    <p>AUD - $</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>韓国ウォン</p>
+                                    <p>KRW - ₩</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dummy">
+                                    <p>香港ドル</p>
+                                    <p>HKD - $</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
             <!-- ログインメニュー -->
             <nav class="login_menu">
                 <ul>
@@ -86,7 +917,7 @@
 
             <!-- 検索フォーム -->
             <form class="form_hotel">
-                <ul class="hotel">
+                <ul class="hotel scale">
                     <li>
                         <div class="hotel_location">
                             <p>ロケーション</p>
@@ -275,7 +1106,7 @@
                         <li>
                             <dl>
                                 <dt>ペット</dt>
-                                <dd><a class="asist_animal_link" href="#asist_animal">介助動物を同伴しますか？</a></dd>
+                                <dd><button class="asist_animal_link">介助動物を同伴しますか？</button></dd>
                             </dl>
                             <p class="guest_count">
                                 <button>―</button>
@@ -286,14 +1117,17 @@
                         </li>
                     </ul>
                 </article>
-                <div id="asist_animal">
-                    <div>
+                <div class="asist_animal modal">
+                    <div class="modal_container">
+                        <button class="modal_close"><span>×</span></button>
                         <p><img src="images/asist_animal.png" alt="介助動物" width="504px" height="429px"></p>
                         <dl>
                             <dt>介助動物</dt>
-                            <dd>介助動物はご同伴いただけます。ペットとして追加する必要はありません。</dd>
+                            <dd>
+                                <p>介助動物はペットではないので、ここに追加する必要はありません。</p>
+                                <p>感情支援動物を同伴しますか？Airbnbの<a href="#dummy">アクセシビリティ対応ポリシー</a>をご確認ください。</p>
+                            </dd>
                         </dl>
-                        <p><a href="#dummy">詳細を確認</a></p>
                     </div>
                 </div>
             </form>
@@ -476,10 +1310,14 @@
                 </div>
                 <div class="linkage">
                     <div class="grobal">
-                        <p><a href="#dummy"><img class="grobal_icon" src="images/grobal_black.svg" alt="グローバルアイコン"><span
-                                    class="grobal_japanese">日本語(JP)</span></a></p>
+                        <p><button class="select_language_area_link" href="#dummy"><img class="grobal_icon"
+                                    src="images/grobal_black.svg" alt="グローバルアイコン">
+                                <span class="grobal_japanese">日本語(JP)</span>
+                            </button>
+                        </p>
                         <p><a href="#dummy">¥ <span>JPY</span></a></p>
                     </div>
+                    <div class="select_language_area_clone"></div>
                     <div class="sns">
                         <p><a href="#dummy"><img class="facebook_icon" src="images/facebook.svg" alt="facebookアイコン"></a>
                         </p>
@@ -494,12 +1332,8 @@
     </footer>
 
     <!--jquery-->
-    <script src="https://code.jquery.com/jquery-3.5.0.min.js"
-        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
-
-    <!-- モーダル -->
-    <script src="https://cdn.jsdelivr.net/npm/modaal@0.4.4/dist/js/modaal.min.js"
-        integrity="sha256-e8kfivdhut3LQd71YXKqOdkWAG1JKiOs2hqYJTe0uTk=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 
     <!--jsファイル-->
     <script src="javascript/index.js"></script>

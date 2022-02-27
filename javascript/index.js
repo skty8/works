@@ -1,15 +1,6 @@
 
 
 $(document).ready(function () {
-    
-    // スクロール表示
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 60) {
-            $('.scroll').fadeIn(10);
-        } else {
-            $('.scroll,.scroll_clicked').fadeOut(10);
-        }
-    });
 
     // スクロール表示html追加
     $('header>.inner_wrap .user_menu').clone().appendTo('.scroll .header_top');
@@ -24,7 +15,30 @@ $(document).ready(function () {
     $('.scroll .grobal_icon,.scroll_clicked .grobal_icon').attr('src', 'images/grobal_black.svg');
     $('.scroll_clicked .logo').attr('src', 'images/logo_red.svg');
 
+    // フッター用 言語と地域
+    $('.select_language_area>.modal_wrap').clone().appendTo('.select_language_area_clone');
+
+    // スクロール表示
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 60) {
+            $('header>.inner_wrap .scale').css("transform", "scale(0)");
+            $('header>.inner_wrap .scale').css("visibility", "hidden");
+            $('.scroll_search button').css("visibility", "visible");
+            $('.scroll_search button').css('transform', 'scale(1)');
+            $('.scroll').css("visibility", "visible");
+
+        } else {
+            $('.scroll_search button').css('transform', 'scale(2)');
+            $('.scroll_search button').css("visibility", "hidden");
+            $('header>.inner_wrap .scale').css("visibility", "visible");
+            $('header>.inner_wrap .scale').css("transform", "scale(1)");
+            $('.scroll').css("visibility", "hidden");
+            $('.scroll_clicked').hide();
+        }
+    });
+
     $('.scroll .scroll_search>button').click(function () {
+        // $('.scroll_clicked').css("visibility", "visible");
         $('.scroll_clicked').show();
     });
 
@@ -192,9 +206,34 @@ $(document).ready(function () {
         }
     });
 
-    // 介助動物モーダル
-    $('.asist_animal_link').modaal();
+    // モーダル
+    $('.asist_animal_link').click(function () {
+        $('.asist_animal').fadeIn();
+    });
 
+    $('.user_menu .select_language_area_link').click(function () {
+        $('.select_language_area').fadeIn();
+    });
 
+    $('.country_button').click(function () {
+        $('.select_currency').hide();
+        $('.select_language_area').show();
+    });
+
+    $('.currency_button').click(function () {
+        $('.select_language_area').hide();
+        $('.select_currency').show();
+    });
+
+    $('.modal_close').click(function () {
+        $('.asist_animal').fadeOut();
+        $('.select_language_area').fadeOut();
+        $('.select_currency').fadeOut();
+        $('.select_language_area_clone').fadeOut();
+    });
+
+    $('.grobal .select_language_area_link').click(function () {
+        $('.select_language_area_clone').fadeIn();
+    });
 
 });
